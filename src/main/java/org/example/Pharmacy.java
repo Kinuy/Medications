@@ -4,16 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Pharmacy {
-    Map<String,Medication> medication;
-//    static int numberOfMedications;
+    private Map<String,Medication> medication;
     public Pharmacy() {
         this.medication = new HashMap<>();
-//        numberOfMedications = 0;
     }
 
     public int getCount(){
         return this.medication.size();
-//        return numberOfMedications;
     }
 
     public void save(String nameOfMedication,Medication medication){
@@ -32,8 +29,6 @@ public class Pharmacy {
     }
 
     public void printMedications(){
-//        System.out.println(this.medication.values());
-
         for(Medication med : this.medication.values()){
             System.out.println(med.getName() + " " + med.getAvailability() + " " + med.getPrice());
         }
